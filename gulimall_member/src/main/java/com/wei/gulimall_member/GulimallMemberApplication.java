@@ -2,7 +2,11 @@ package com.wei.gulimall_member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
+@EnableFeignClients(basePackages = "com.wei.gulimall_member.feign")
+@EnableDiscoveryClient
 @SpringBootApplication
 public class GulimallMemberApplication {
 
